@@ -22,20 +22,38 @@ Node* createLinkedList(int arr[], int index, int size, Node* prev){
     createLinkedList(arr,index+1,size,temp);
 }
 
+Node*insertAtstart(Node*head ,int data){
+    if(head==NULL){
+        return head;
+    }
+
+    Node*temp=new Node(data);
+    cout<<temp->data<<"->"<<" ";
+    temp->next=head;
+    head=temp;
+
+}
+
 int main(){
-    // Node A1(4); //Static way
 
     Node* head, *tail;
-    tail=head=NULL; // to start with an empty head
+    tail=head=NULL; 
 
     int arr[]={2,4,6,8,10};
 
     head=createLinkedList(arr,0,5,head);
 
-    Node *temp;
-    temp=head;
-    while(temp){
-        cout<<temp->data<<" ";
-        temp=temp->next;
-    }
+    insertAtstart(head,20);
+    insertAtstart(head,30);
+    insertAtstart(head,40);
+    insertAtstart(head,50);
+
+    // Node *temp;
+    // temp=head;
+    // while(temp){
+    //     cout<<temp->data<<" ";
+    //     temp=temp->next;
+    // }
+
+    
 }

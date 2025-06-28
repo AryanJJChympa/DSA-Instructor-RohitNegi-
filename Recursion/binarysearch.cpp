@@ -6,7 +6,7 @@ bool binarysearch(int arr[], int start, int end, int x)
   if (start > end)
     return 0;
 
-  int mid = start + (end - start) / 2;
+  int mid = (start+end)/2;
 
   if (arr[mid] == x)
   {
